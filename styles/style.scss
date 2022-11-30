@@ -1,0 +1,132 @@
+@import "./fonts";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto-Regular";
+    background-color: #3B3F45;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 534px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    min-height: 82px;
+    color: #FF8984;
+    background-color: #4A4F56;
+
+		&__title {
+            font-size: 24px;
+            line-height: 28px;
+            // font-family: "Roboto-Bold" ;
+            font-weight: 700;
+            color: red;
+		}
+
+		&__subTitle {
+            font-size: 16px;
+            line-height: 19px;
+		}
+}
+
+
+.list {
+    margin-top: 20px;
+    color: #fff;
+
+    &__item {
+        background-color: #88839E;
+        position: relative;
+        font-size: 18px;
+        display: block;
+        padding: 12px 12px 12px 47px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 19px;
+            aspect-ratio: 1 / 1;
+            background-color: #fff;
+            border: 1px solid black;
+            top:50%;
+            left: 12px;
+            transform: translateY(-50%);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: contain;
+                
+        }
+
+        &:nth-child(even){
+            background-color: #625E77;
+        }
+        &:hover{
+            border-top: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+        }
+        &:has(input[type="checkbox"]:checked){
+            // background-color: #7A7593;
+            opacity: 0.8;
+            text-decoration: line-through;
+
+            &::before{
+                background-image: url(/img/checked.svg);
+            }
+            
+            .list__itemText, .list__itemSubtext {
+                opacity: 0.5;
+            }
+        }
+        &:has(input[type="checkbox"]:checked) + &{
+            box-shadow: inset 0px 24px 23px -17px rgba(0,0,0,0.75);
+        }
+
+    }
+
+    &__itemHiddenCheckbox {
+        display: none;
+    }
+
+    &__itemText {
+        font-size: 18px;
+        // display: block;
+        
+    }
+
+    &__itemSubtext {
+        // font-size: 11px;
+        padding-left: 3px;
+    }
+}
+
+.customCheckbox{
+    position: absolute;
+    display: inline-block;
+    width: 19px;
+    aspect-ratio: 1 / 1;
+    top:12px;
+    left:12px;
+    background-color: #fff;
+}
+
+
+
+.footer {
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF8984;
+    background-color: #4A4F56;
+    text-align: center;
+    margin-top: 45px;
+    padding: 12px 0;
+}
