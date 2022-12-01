@@ -6,41 +6,14 @@
   font-family: "Roboto-Bold";
   src: url(/fonts/Roboto-Bold.ttf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto-Regular";
-  background-color: #3B3F45;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 534px;
-  margin: 0 auto;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 82px;
+.footer {
+  font-size: 18px;
+  line-height: 21px;
   color: #FF8984;
   background-color: #4A4F56;
-}
-.header__title {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: red;
-}
-.header__subTitle {
-  font-size: 16px;
-  line-height: 19px;
+  text-align: center;
+  margin-top: 45px;
+  padding: 12px 0;
 }
 
 .list {
@@ -86,7 +59,10 @@ body {
   opacity: 0.5;
 }
 .list__item:has(input[type=checkbox]:checked) + .list__item {
-  box-shadow: inset 0px 24px 23px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 35px 21px -33px rgba(0, 0, 0, 0.67);
+}
+.list__item:active {
+  background-color: orange;
 }
 .list__itemHiddenCheckbox {
   display: none;
@@ -95,25 +71,43 @@ body {
   font-size: 18px;
 }
 .list__itemSubtext {
+  font-size: 11px;
   padding-left: 3px;
+  vertical-align: middle;
 }
 
-.customCheckbox {
-  position: absolute;
-  display: inline-block;
-  width: 19px;
-  aspect-ratio: 1/1;
-  top: 12px;
-  left: 12px;
-  background-color: #fff;
-}
-
-.footer {
-  font-size: 18px;
-  line-height: 21px;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 82px;
   color: #FF8984;
   background-color: #4A4F56;
-  text-align: center;
-  margin-top: 45px;
-  padding: 12px 0;
+}
+.header__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Roboto-Bold";
+}
+.header__subTitle {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto-Regular";
+  background-color: #3B3F45;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 534px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
